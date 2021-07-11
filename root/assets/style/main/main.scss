@@ -151,7 +151,7 @@ button, .button{
 //*  visibility
 .hide-for-mobile {
   //hide elements in mobile view
-  @include breakpoint-down(medium) {
+  @include breakpoint-down(small) {
     display: none;
   }
 }
@@ -163,12 +163,27 @@ button, .button{
   }
 }
 
+.hide-for-tablet {
+  //hide elements in desktopview
+  @include breakpoint-up(medium) {
+    display: none;
+  }
+}
+
 // header styling
 .header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: rem(39) rem(165);
+    padding: rem(40) rem(165);
+
+    @include breakpoint-down(medium){
+        padding: rem(40);
+    }
+
+    @include breakpoint-down(small){
+        padding: rem(40) rem(24);
+    }
 
     &__logo{
         flex: 1;
@@ -177,10 +192,31 @@ button, .button{
 
 
     nav{
-        flex: 4;
+        flex: 3;
         display:flex;
         justify-content: space-between;
         align-items: center;
+
+        @include breakpoint-down(small){
+            flex: 1;
+            justify-content: flex-end;
+        }
+
+       
+    }
+
+    &__menu{
+        
+        span{
+            display:block;
+            width: rem(28);
+            height: rem(3);
+            background: $color-sec-mirage-blue;
+
+            &:not(:first-child){
+                margin-top: rem(4);
+            }
+        }
     }
 
 
