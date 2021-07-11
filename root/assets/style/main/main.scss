@@ -249,7 +249,10 @@ button, .button{
 
 
 .footer{
-    background: $color-sec-mirage-blue;
+    background:url(../../img/shared/desktop/bg-pattern-circle.svg) ,$color-sec-mirage-blue;
+    background-repeat: no-repeat;
+    background-size: rem(780), 100%;
+    background-position: rem(980) rem(-150), center;
     padding: rem(31) rem(165);
     display: flex;
     align-items: center;

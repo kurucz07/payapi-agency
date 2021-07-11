@@ -185,7 +185,10 @@ button, .button {
 }
 
 .footer {
-  background: #1c2731;
+  background: url(../../img/shared/desktop/bg-pattern-circle.svg), #1c2731;
+  background-repeat: no-repeat;
+  background-size: 48.75rem, 100%;
+  background-position: 61.25rem -9.375rem, center;
   padding: 1.9375rem 10.3125rem;
   display: -webkit-box;
   display: -ms-flexbox;
