@@ -170,6 +170,19 @@ button, .button{
   }
 }
 
+.links{
+
+        a{
+
+            &:not(:first-of-type){
+                margin-left: rem(40);
+            }
+
+        }
+
+        
+    }
+
 // header styling
 .header{
     display: flex;
@@ -220,18 +233,7 @@ button, .button{
     }
 
 
-    &__links{
-
-        a{
-
-            &:not(:first-of-type){
-                margin-left: rem(40);
-            }
-
-        }
-
-        
-    }
+    
 
 
     &__cta{
@@ -243,7 +245,47 @@ button, .button{
         }
     }
 
+}
 
 
+.footer{
+    background: $color-sec-mirage-blue;
+    padding: rem(31) rem(165);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo{
+        flex: 1;
+    }
+
+    &__section{
+        flex:3;
+        display: flex;
+        justify-content:space-between;
+    }
+
+    &__links{
+        
+        a{
+            color: $color-pry-white;
+        }
+    }
+
+    &__social{
+
+        i{
+            color: $color-pry-white;
+            font-size: rem(24);
+
+            &:hover{
+                color: $color-sec-pink;
+            }
+
+            &:not(:first-child){
+                margin-left: rem(24);
+            }
+        }
+    }
 }
 

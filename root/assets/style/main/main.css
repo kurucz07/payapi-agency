@@ -103,6 +103,10 @@ button, .button {
   }
 }
 
+.links a:not(:first-of-type) {
+  margin-left: 2.5rem;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -171,10 +175,6 @@ button, .button {
   margin-top: 0.25rem;
 }
 
-.header__links a:not(:first-of-type) {
-  margin-left: 2.5rem;
-}
-
 .header__cta {
   letter-spacing: -0.12px;
   color: #fbfcfe;
@@ -182,5 +182,54 @@ button, .button {
 
 .header__cta:hover {
   background-color: #da6c96;
+}
+
+.footer {
+  background: #1c2731;
+  padding: 1.9375rem 10.3125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.footer__section {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__links a {
+  color: #fbfcfe;
+}
+
+.footer__social i {
+  color: #fbfcfe;
+  font-size: 1.5rem;
+}
+
+.footer__social i:hover {
+  color: #da6c96;
+}
+
+.footer__social i:not(:first-child) {
+  margin-left: 1.5rem;
 }
 /*# sourceMappingURL=main.css.map */
