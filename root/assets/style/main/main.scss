@@ -1,0 +1,98 @@
+//* ===============  AUTOMATICALLY CONVERT PX TO REM
+@function rem($size) {
+    $remSize: $size / 16;
+    @return #{$remSize}rem;
+}
+//* =======================  ROOT SETTINGS
+
+//* ===============  COLORS 
+
+// primary
+$color-pry-pink: hsl(337, 48%, 49%);
+$color-pry-white: hsl(220, 60%, 99%);
+
+//secondary
+$color-sec-san-blue: hsl(207, 33%, 32%);
+$color-sec-mirage-blue: hsl(207, 27%, 15%);
+$color-sec-pink: hsl(337, 60%, 64%);
+$color-sec-lt-san-blue: hsl(207, 16%, 50%);
+$color-bg: #f2f2f2;
+
+//state
+$color-sec-500: #36536B;
+$color-sec-600: #DA6D97;
+$color-sec-700: #1B262F;
+$color-sec-800: #FBFCFE;
+$color-sec-900: #FF0000;
+$shadow-btn: rem(0) rem(2) rem(5) rgba(0, 0, 0, 0.199);
+
+//* =======================  TYPOGRAPHY
+
+//FONT FAMILIY       
+$font-DM: 'DM Serif Display', serif;
+$font-Public-sans: 'Public Sans', sans-serif;
+
+// FONT WEIGHT
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semi-bold: 600;
+$weight-bold: 700;
+$weight-extra-bold: 800;
+
+// ===============  BASE CSS RESET
+*, *::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+html:focus-within {
+  scroll-behavior: smooth;
+}
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+//* =============== MAKE ANIMATION OPTIONAL FOR USERS
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+     scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    //   scroll-behavior: auto !important;
+    }
+  }
+
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+// body
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    background-color: $color-bg;  
+    font-family: $font-public-sans;    
+    font-size: rem(15);
+    line-height: rem(28 );
+    color: $color-sec-lt-san-blue;
+}
