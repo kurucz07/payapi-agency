@@ -107,6 +107,12 @@ button, .button {
   margin-left: 2.5rem;
 }
 
+@media (max-width: 639px) {
+  .links a:not(:first-of-type) {
+    margin-left: 0;
+  }
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -201,6 +207,24 @@ button, .button {
           justify-content: space-between;
 }
 
+@media (max-width: 1023px) {
+  .footer {
+    padding: 1.9375rem 2.5rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .footer {
+    background-position: center 6.875rem, center;
+    padding: 3rem 7.5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2.5rem;
+  }
+}
+
 .footer__logo {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -217,6 +241,35 @@ button, .button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 639px) {
+  .footer__section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .footer__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1.9375rem;
+  }
 }
 
 .footer__links a {

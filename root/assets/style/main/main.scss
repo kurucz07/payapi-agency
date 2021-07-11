@@ -45,11 +45,11 @@ $color-sec-lt-san-blue: hsl(207, 16%, 50%);
 $color-bg: #EDF3F8;
 
 //state
-$color-sec-link: #93A5B3;
-$color-sec-600: #DA6D97;
-$color-sec-700: #1B262F;
-$color-sec-800: #FBFCFE;
-$color-sec-900: #FF0000;
+// $color-sec-link: #93A5B3;
+// $color-sec-600: #DA6D97;
+// $color-sec-700: #1B262F;
+// $color-sec-800: #FBFCFE;
+// $color-sec-900: #FF0000;
 $shadow-btn: rem(10) rem(10) rem(25) rgba(55, 84, 109, 0.268);
 
 //* =======================  TYPOGRAPHY
@@ -176,7 +176,14 @@ button, .button{
 
             &:not(:first-of-type){
                 margin-left: rem(40);
+
+                @include breakpoint-down(small){
+                 margin-left: 0;
+                 
+                }
             }
+
+            
 
         }
 
@@ -258,6 +265,17 @@ button, .button{
     align-items: center;
     justify-content: space-between;
 
+    @include breakpoint-down(medium){
+        padding: rem(31) rem(40);
+    }
+
+    @include breakpoint-down(small){
+        background-position: center rem(110), center;
+        padding: rem(48) rem(120);
+        flex-direction: column;
+        gap: rem(40);
+    }
+
     &__logo{
         flex: 1;
     }
@@ -266,9 +284,25 @@ button, .button{
         flex:3;
         display: flex;
         justify-content:space-between;
+
+        @include breakpoint-down(small){
+
+            flex-direction: column;
+            align-items: center;
+            gap: rem(40);
+        }
     }
 
     &__links{
+
+        @include breakpoint-down(small){
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: rem(31);
+
+        }
         
         a{
             color: $color-pry-white;
