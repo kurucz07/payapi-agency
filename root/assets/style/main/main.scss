@@ -5,6 +5,32 @@
 }
 //* =======================  ROOT SETTINGS
 
+
+// *media queries
+
+//640px, 1024px, 1400px
+$breakpoints-up: ("medium": "640px", "large": "1024px", "xlarge": "1400px");
+
+//639px, 1023px, 1399px
+$breakpoints-down: ( "small":"639px", "medium": "1023px", "large": "1399px");
+
+
+@mixin breakpoint-up($size) {
+    
+    @media (min-width: map-get($breakpoints-up, $size )) {
+        @content;
+    }
+}
+
+@mixin breakpoint-down($size) {
+
+    @media (max-width: map-get($breakpoints-down, $size )) {
+        @content;
+    } 
+}
+
+
+
 //* ===============  COLORS 
 
 // primary
@@ -16,21 +42,21 @@ $color-sec-san-blue: hsl(207, 33%, 32%);
 $color-sec-mirage-blue: hsl(207, 27%, 15%);
 $color-sec-pink: hsl(337, 60%, 64%);
 $color-sec-lt-san-blue: hsl(207, 16%, 50%);
-$color-bg: #f2f2f2;
+$color-bg: #EDF3F8;
 
 //state
-$color-sec-500: #36536B;
+$color-sec-link: #93A5B3;
 $color-sec-600: #DA6D97;
 $color-sec-700: #1B262F;
 $color-sec-800: #FBFCFE;
 $color-sec-900: #FF0000;
-$shadow-btn: rem(0) rem(2) rem(5) rgba(0, 0, 0, 0.199);
+$shadow-btn: rem(10) rem(10) rem(25) rgba(55, 84, 109, 0.268);
 
 //* =======================  TYPOGRAPHY
 
 //FONT FAMILIY       
 $font-DM: 'DM Serif Display', serif;
-$font-Public-sans: 'Public Sans', sans-serif;
+$font-public-sans: 'Public Sans', sans-serif;
 
 // FONT WEIGHT
 $weight-regular: 400;
@@ -96,3 +122,92 @@ body {
     line-height: rem(28 );
     color: $color-sec-lt-san-blue;
 }
+
+a{
+    font-size: rem(15);
+    font-family: $font-public-sans;
+    font-weight: $weight-bold;
+    text-decoration: none;
+    color: $color-sec-san-blue;
+    opacity: 0.7;
+
+    &:hover{
+        opacity: 1;
+    }
+}
+
+h1{
+    font-family: $font-DM;
+    font-size: rem(32);
+}
+
+button, .button{
+    padding: rem(15) rem(25);
+    border-radius: rem(24);
+    background-color: $color-pry-pink;
+    box-shadow: $shadow-btn;
+}
+
+//*  visibility
+.hide-for-mobile {
+  //hide elements in mobile view
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  //hide elements in desktopview
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
+
+// header styling
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(39) rem(165);
+
+    &__logo{
+        flex: 1;
+    }
+
+
+
+    nav{
+        flex: 4;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    &__links{
+
+        a{
+
+            &:not(:first-of-type){
+                margin-left: rem(40);
+            }
+
+        }
+
+        
+    }
+
+
+    &__cta{
+        letter-spacing: -0.12px;
+        color: $color-pry-white;
+
+        &:hover{
+            background-color: $color-sec-pink;
+        }
+    }
+
+
+
+}
+

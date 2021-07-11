@@ -30,8 +30,8 @@
   <script defer src="./assets/js/main.js"></script>
 
   <!-- STYLE SHEETS -->
-  <link rel="stylesheet" href="./assets/scss/main/main.css">
-  <link rel="stylesheet" href="./assets/scss/home/home.css">
+  <link rel="stylesheet" href="./assets/style/main/main.css">
+  <link rel="stylesheet" href="./assets/style/home/home.css">
 
   <!-- FONT DNS FROM: fonts.google.com -->
 
@@ -51,12 +51,31 @@
 
   <body>
     
-    Pricing
-    About
-    Contact
-    Schedule a Demo
+    <header class="header">
+      <div class="header__logo">
+        <img src="./assets/img/shared/desktop/logo.svg" alt="">
+      </div>
 
-    Start building with our APIs for absolutely free.
+      <nav>
+
+        <div class="header__menu hide-for-desktop">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+
+        <div class="header__links hide-for-mobile">
+          <a href="pricing.html">Pricing</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        
+        <a href="#" class="header__cta button hide-for-mobile">Schedule a Demo</a>
+      </nav>
+    </header>
+
+    <!-- Start building with our APIs for absolutely free.
     Enter email address 
     Schedule a Demo
     Have any questions? Contact Us
@@ -95,7 +114,7 @@
 
     Pricing
     About
-    Contact
+    Contact -->
   </body>
 
 </html>
