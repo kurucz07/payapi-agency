@@ -183,12 +183,10 @@ button, .button{
                 }
             }
 
-            
-
         }
 
         
-    }
+}
 
 // header styling
 .header{
@@ -221,7 +219,6 @@ button, .button{
             flex: 1;
             justify-content: flex-end;
         }
-
        
     }
 
@@ -267,6 +264,7 @@ button, .button{
 
     @include breakpoint-down(medium){
         padding: rem(31) rem(40);
+        background-position: rem(400) rem(-150), center;
     }
 
     @include breakpoint-down(small){
@@ -286,9 +284,9 @@ button, .button{
         justify-content:space-between;
 
         @include breakpoint-down(small){
-
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             gap: rem(40);
         }
     }
@@ -310,6 +308,11 @@ button, .button{
     }
 
     &__social{
+
+
+        @include breakpoint-down(small){
+            display:flex;
+        }
 
         i{
             color: $color-pry-white;
