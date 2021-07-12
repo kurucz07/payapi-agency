@@ -210,6 +210,7 @@ button, .button {
 @media (max-width: 1023px) {
   .footer {
     padding: 1.9375rem 2.5rem;
+    background-position: 25rem -9.375rem, center;
   }
 }
 
@@ -252,6 +253,9 @@ button, .button {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 2.5rem;
   }
 }
@@ -274,6 +278,14 @@ button, .button {
 
 .footer__links a {
   color: #fbfcfe;
+}
+
+@media (max-width: 639px) {
+  .footer__social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .footer__social i {
