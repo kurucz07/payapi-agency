@@ -608,4 +608,36 @@ button, .button {
     text-align: center;
   }
 }
+
+.features {
+  padding: 9.375rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 9.375rem;
+  background: url(../../img/shared/desktop/bg-pattern-circle.svg);
+  background-repeat: no-repeat;
+  background-position: 62.5rem bottom;
+}
+
+.features .feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.features__up {
+  padding: 0 13.4375rem 0 13.125rem;
+}
+
+.features__down {
+  padding: 0 10.59375rem 0 10.3125rem;
+}
 /*# sourceMappingURL=main.css.map */
