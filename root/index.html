@@ -51,29 +51,49 @@
 
   <body>
     
-    <header class="header">
-      <div class="header__logo">
-        <img src="./assets/img/shared/desktop/logo.svg" alt="">
-      </div>
+    <div class="background-container">
 
-      <nav>
-
-        <div class="header__menu hide-for-tablet">
-          <span></span>
-          <span></span>
-          <span></span>
+      <header class="header">
+        <div class="header__logo">
+          <img src="./assets/img/shared/desktop/logo.svg" alt="">
         </div>
+        <nav>
+          <div class="header__menu hide-for-tablet">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="header__links links hide-for-mobile">
+            <a href="pricing.html">Pricing</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+      
+          <a href="#" class="header__cta button hide-for-mobile">Schedule a Demo</a>
+        </nav>
+      </header>
 
+      <main>
 
-        <div class="header__links links hide-for-mobile">
-          <a href="pricing.html">Pricing</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-        </div>
-        
-        <a href="#" class="header__cta button hide-for-mobile">Schedule a Demo</a>
-      </nav>
-    </header>
+        <section class="hero">
+          <div class="hero__left">
+            <h1>
+              Start building with our APIs for absolutely free.
+            </h1>
+            <form action="" method="get">
+              <input type="email" name="email" id="email" placeholder="Enter email address">
+              <input type="button" value="Schedule a Demo">
+            </form>
+            <p>Have any questions? <a href="contact.html">Contact Us</a></p>
+          </div>
+          <div class="hero__right">
+            <img src="./assets/img/home/desktop/illustration-phone-mockup.svg" alt="">
+          </div>
+        </section>
+
+      </main>
+
+    </div>
 
     <footer class="footer">
 
@@ -100,10 +120,10 @@
 
     </footer>
 
-    <!-- Start building with our APIs for absolutely free.
-    Enter email address 
-    Schedule a Demo
-    Have any questions? Contact Us
+    <!-- 
+    
+    
+    
 
     Who we work with
     Today, millions of people around the world have successfully connected 

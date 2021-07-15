@@ -139,6 +139,7 @@ a{
 h1{
     font-family: $font-DM;
     font-size: rem(32);
+    color: $color-sec-san-blue;
 }
 
 button, .button{
@@ -252,6 +253,8 @@ button, .button{
 }
 
 
+//*** Footer style 
+
 .footer{
     background:url(../../img/shared/desktop/bg-pattern-circle.svg) ,$color-sec-mirage-blue;
     background-repeat: no-repeat;
@@ -329,3 +332,13 @@ button, .button{
     }
 }
 
+
+.background-container{
+    background: url(../../img/shared/desktop/bg-pattern-circle.svg);
+    background-repeat: no-repeat;
+    background-position: rem(780) rem(-200);
+}
+
+main{
+    padding: 0 rem(165)
+}

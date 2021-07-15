@@ -75,6 +75,7 @@ a:hover {
 h1 {
   font-family: "DM Serif Display", serif;
   font-size: 2rem;
+  color: #37546d;
 }
 
 button, .button {
@@ -299,5 +300,15 @@ button, .button {
 
 .footer__social i:not(:first-child) {
   margin-left: 1.5rem;
+}
+
+.background-container {
+  background: url(../../img/shared/desktop/bg-pattern-circle.svg);
+  background-repeat: no-repeat;
+  background-position: 48.75rem -12.5rem;
+}
+
+main {
+  padding: 0 10.3125rem;
 }
 /*# sourceMappingURL=main.css.map */
