@@ -3,7 +3,14 @@
     justify-content:space-between;
     align-items: center;
 
+    &__left{
+        flex: 1.5;
+    }
 
-
+    &__right{
+        flex: 1;
+        justify-items: center;
+        
+    }
 
 }

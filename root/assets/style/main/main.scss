@@ -138,8 +138,10 @@ a{
 
 h1{
     font-family: $font-DM;
-    font-size: rem(32);
+    font-size: rem(72);
     color: $color-sec-san-blue;
+    line-height: rem(72);
+    letter-spacing: -0.55px;
 }
 
 button, .button{

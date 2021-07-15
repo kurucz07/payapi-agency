@@ -9,4 +9,17 @@
       -ms-flex-align: center;
           align-items: center;
 }
+
+.hero__left {
+  -webkit-box-flex: 1.5;
+      -ms-flex: 1.5;
+          flex: 1.5;
+}
+
+.hero__right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  justify-items: center;
+}
 /*# sourceMappingURL=home.css.map */
