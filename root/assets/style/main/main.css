@@ -332,15 +332,20 @@ main {
           flex: 1.5;
 }
 
+.hero__left h1 {
+  margin-bottom: 1.3125rem;
+}
+
 .hero__left .form-email {
   background-color: #fbfcfe;
   border-radius: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 27.8125rem;
 }
 
-.hero__left input[type=email] {
+.hero__left .form-email input[type=email] {
   color: #36536b;
   opacity: 0.5;
   font-weight: 700;
@@ -349,15 +354,24 @@ main {
   border-radius: 1.5rem;
 }
 
-.hero__left input[type=email]:focus {
+.hero__left .form-email input[type=email]:focus {
   outline: none;
+  opacity: 1;
 }
 
-.hero__left .btn-form {
+.hero__left .form-email .btn-form {
   border: none;
   border-radius: 1.5rem;
   padding: 0.9375rem 1.625rem;
   background-color: #da6c96;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #fbfcfe;
+}
+
+.hero__left > p {
+  margin-top: 1rem;
+  padding-left: 1.6875rem;
 }
 
 .hero__right {

@@ -13,35 +13,53 @@
     &__left{
         flex: 1.5;
 
+        h1{
+            margin-bottom: rem(21);
+        }
+
         .form-email{
             background-color: $color-pry-white;
             border-radius: rem(24);
 
             display:flex;
+            width: rem(445);
 
+            input[type=email]{
+                color: $color-sec-san-blue;
+                opacity: 0.5;
+                font-weight: $weight-bold;
+                padding: rem(14) rem(100) rem(14) rem(27);
+                border: none;
+                border-radius: rem(24);
 
-        }
-
-        input[type=email]{
-            color: $color-sec-san-blue;
-            opacity: 0.5;
-            font-weight: $weight-bold;
-            padding: rem(14) rem(100) rem(14) rem(27);
-            border: none;
-            border-radius: rem(24);
-
-            &:focus{
-                outline: none;
+                &:focus{
+                    outline: none;
+                    opacity: 1;
+                    
+                }
             }
+
+            .btn-form{
+                border:none;
+                border-radius: rem(24);
+                padding: rem(15) rem(26);
+
+                background-color: $color-sec-pink ;
+                font-size: rem(15);
+                font-weight: $weight-bold;
+                color: $color-pry-white;
+
+            }
+
+
         }
 
-        .btn-form{
-            border:none;
-            border-radius: rem(24);
-            padding: rem(15) rem(26);
-
-            background-color: $color-sec-pink ;
+        &>p{
+            margin-top: rem(16);
+            padding-left: rem(27);
         }
+
+        
     }
 
     &__right{
