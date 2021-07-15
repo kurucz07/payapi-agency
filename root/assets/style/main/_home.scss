@@ -6,6 +6,7 @@
 }
 
 .hero{
+    padding: 0 rem(165);
     display:flex;
     justify-content:space-between;
     align-items: center;
@@ -49,8 +50,6 @@
                 text-align: center;
             }
         }
-
-        
     }
 
     &__right{
@@ -70,4 +69,54 @@
         }
     }
 
+}
+
+.partners{
+    display:flex;
+    background-color: $color-sec-mirage-blue ;
+    padding: rem(100) rem(165);
+    align-items: center;
+    gap: rem(100);
+
+
+    &__logos{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: rem(40);
+
+        &-logo{
+            display: flex;
+            gap: rem(61);
+        }
+    }
+
+    &__content{
+        flex: 1; 
+        display:flex;
+        flex-direction: column;
+        gap: rem(32);
+
+        h2{
+            color: $color-pry-white;
+        }
+
+        .btn-outline{
+            border: 1px solid $color-pry-white;
+            width: rem(140);
+            display: grid;
+            place-items: center;
+            place-content: center;
+            height: rem(48);
+            border-radius: rem(24);
+            opacity: 1;
+            color: $color-pry-white;
+
+            &:hover{
+                background-color: $color-pry-white;
+                color: $color-sec-mirage-blue;
+            }
+        }
+
+    }
 }

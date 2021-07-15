@@ -71,14 +71,18 @@ a{
     text-decoration: none;
     color: $color-sec-san-blue;
     opacity: 0.7;
+    letter-spacing: -0.12px;
 
     &:hover{
         opacity: 1;
     }
 }
 
+h1,h2{
+  font-family: $font-DM;
+}
+
 h1{
-    font-family: $font-DM;
     font-size: rem(72);
     color: $color-sec-san-blue;
     line-height: rem(72);
@@ -95,6 +99,18 @@ h1{
       font-size: rem(32);
       line-height: rem(36);
       letter-spacing: -0.25px;
+    }
+}
+
+h2{
+  font-size: rem(48);
+  line-height: rem(56);
+  letter-spacing: -0.37px;
+
+  @include breakpoint-down(small){
+    font-size: rem(32);
+    line-height: rem(36);
+    letter-spacing: -0.25px;
     }
 }
 
@@ -159,15 +175,15 @@ button, .button{
     }
 }
 
-main{
-    padding: 0 rem(165);
-    // background-color: red;
+// main{
+    
+//     // background-color: red;
 
-    @include breakpoint-down(medium){
-      padding: unset;
-    }
+//     @include breakpoint-down(medium){
+//       padding: unset;
+//     }
 
-}
+// }
 
 // Page email form style
 
