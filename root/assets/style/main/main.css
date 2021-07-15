@@ -227,6 +227,24 @@ button, .button {
   }
 }
 
+.btn-outline {
+  border: 1px solid #fbfcfe;
+  width: 8.75rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  height: 3rem;
+  border-radius: 1.5rem;
+  opacity: 1;
+  color: #fbfcfe;
+}
+
+.btn-outline:hover {
+  background-color: #fbfcfe;
+  color: #1c2731;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -526,6 +544,7 @@ button, .button {
 
 @media (max-width: 1023px) {
   .partners {
+    margin-top: 6.25rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -577,24 +596,6 @@ button, .button {
 
 .partners__content h2 {
   color: #fbfcfe;
-}
-
-.partners__content .btn-outline {
-  border: 1px solid #fbfcfe;
-  width: 8.75rem;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  place-content: center;
-  height: 3rem;
-  border-radius: 1.5rem;
-  opacity: 1;
-  color: #fbfcfe;
-}
-
-.partners__content .btn-outline:hover {
-  background-color: #fbfcfe;
-  color: #1c2731;
 }
 
 @media (max-width: 1023px) {

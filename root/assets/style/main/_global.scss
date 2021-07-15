@@ -175,17 +175,9 @@ button, .button{
     }
 }
 
-// main{
-    
-//     // background-color: red;
 
-//     @include breakpoint-down(medium){
-//       padding: unset;
-//     }
 
-// }
-
-// Page email form style
+//*** Page email form style
 
 .form-email{
             background-color: $color-pry-white;
@@ -243,3 +235,21 @@ button, .button{
 
 
         }
+
+// *** button with border style
+.btn-outline{
+  border: 1px solid $color-pry-white;
+  width: rem(140);
+  display: grid;
+  place-items: center;
+  place-content: center;
+  height: rem(48);
+  border-radius: rem(24);
+  opacity: 1;
+  color: $color-pry-white;
+
+  &:hover{
+      background-color: $color-pry-white;
+      color: $color-sec-mirage-blue;
+  }
+}
