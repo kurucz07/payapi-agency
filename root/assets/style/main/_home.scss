@@ -73,21 +73,54 @@
 
 .partners{
     display:flex;
+    background: url(../../img/shared/desktop/bg-pattern-circle.svg);
+    background-repeat: no-repeat;
+    background-position: rem(-200) rem(-350);
     background-color: $color-sec-mirage-blue ;
     padding: rem(100) rem(165);
     align-items: center;
     gap: rem(100);
 
 
+    @include breakpoint-down(medium){
+        flex-direction: column-reverse;
+        padding: rem(88) rem(116);
+        background-position: center rem(-580);
+    }
+
+    @include breakpoint-down(small){
+        padding: rem(80) rem(24);
+    }
+    
+
+
     &__logos{
         flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: rem(40);
+        // width: 100%;
+        // // display: flex;
+        // // flex-direction: column;
+        // display: grid;
+        // place-items: center;
+        // place-content: center;
+        // gap: rem(40);
 
-        &-logo{
-            display: flex;
-            gap: rem(61);
+        // &-logo{
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
+        //     gap: rem(31);
+        // }
+
+        display: grid;
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+        grid-template-rows: repeat(2,auto-fit);
+        gap: rem(50);
+
+        @include breakpoint-down(small){
+            grid-template-columns: repeat(2, minmax(100px, 1fr));
+
+
+
         }
     }
 
@@ -97,9 +130,13 @@
         flex-direction: column;
         gap: rem(32);
 
+        
+
         h2{
             color: $color-pry-white;
         }
+
+
 
         .btn-outline{
             border: 1px solid $color-pry-white;
@@ -115,6 +152,14 @@
             &:hover{
                 background-color: $color-pry-white;
                 color: $color-sec-mirage-blue;
+            }
+        }
+
+        @include breakpoint-down(medium){
+            align-items: center;
+
+            h2,p{
+                text-align: center;
             }
         }
 
