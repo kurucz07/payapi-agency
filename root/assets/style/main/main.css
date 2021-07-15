@@ -624,6 +624,14 @@ button, .button {
   background-position: 62.5rem bottom;
 }
 
+@media (max-width: 1023px) {
+  .features {
+    background: none;
+    padding: 6.25rem 0;
+    gap: 6.25rem;
+  }
+}
+
 .features .feature {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -633,11 +641,47 @@ button, .button {
           align-items: center;
 }
 
+@media (max-width: 1023px) {
+  .features .feature {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+}
+
 .features__up {
   padding: 0 13.4375rem 0 13.125rem;
 }
 
 .features__down {
   padding: 0 10.59375rem 0 10.3125rem;
+}
+
+@media (max-width: 1023px) {
+  .features__up, .features__down {
+    padding: 0 6.125rem 0 6.0625rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .features__up, .features__down {
+    padding: 0 1.5rem 0 1.4375rem;
+  }
+}
+
+.features__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
 }
 /*# sourceMappingURL=main.css.map */

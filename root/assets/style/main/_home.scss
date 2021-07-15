@@ -154,17 +154,50 @@
     background-repeat: no-repeat;
     background-position: rem(1000) bottom;
 
+    @include breakpoint-down(medium){
+        background: none;
+        padding:rem(100) 0;
+        gap: rem(100);
+    }
+
     .feature{
         display: flex;
         align-items: center;
+
+        @include breakpoint-down(medium){
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
     }
 
     &__up{
         padding: 0 rem(215) 0 rem(210);
+
     }
 
     &__down{
         padding: 0 rem(169.5) 0 rem(165);
+
+    
+    }
+
+    &__up, &__down{
+        @include breakpoint-down(medium){
+            padding: 0 rem(98) 0 rem(97);
+        }
+
+        @include breakpoint-down(small){
+            padding: 0 rem(24) 0 rem(23);
+
+        }
+    }
+
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: rem(24);
     }
 
 }
