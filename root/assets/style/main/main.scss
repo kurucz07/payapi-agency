@@ -1,346 +1,46 @@
+@import "variables";
+@import "mixins";
+
+@import "global";
+@import "header-footer";
+@import "home";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //* ===============  AUTOMATICALLY CONVERT PX TO REM
 @function rem($size) {
     $remSize: $size / 16;
     @return #{$remSize}rem;
-}
-//* =======================  ROOT SETTINGS
-
-
-// *media queries
-
-//640px, 1024px, 1400px
-$breakpoints-up: ("medium": "640px", "large": "1024px", "xlarge": "1400px");
-
-//639px, 1023px, 1399px
-$breakpoints-down: ( "small":"639px", "medium": "1023px", "large": "1399px");
-
-
-@mixin breakpoint-up($size) {
-    
-    @media (min-width: map-get($breakpoints-up, $size )) {
-        @content;
-    }
-}
-
-@mixin breakpoint-down($size) {
-
-    @media (max-width: map-get($breakpoints-down, $size )) {
-        @content;
-    } 
-}
-
-
-
-//* ===============  COLORS 
-
-// primary
-$color-pry-pink: hsl(337, 48%, 49%);
-$color-pry-white: hsl(220, 60%, 99%);
-
-//secondary
-$color-sec-san-blue: hsl(207, 33%, 32%);
-$color-sec-mirage-blue: hsl(207, 27%, 15%);
-$color-sec-pink: hsl(337, 60%, 64%);
-$color-sec-lt-san-blue: hsl(207, 16%, 50%);
-$color-bg: #EDF3F8;
-
-//state
-// $color-sec-link: #93A5B3;
-// $color-sec-600: #DA6D97;
-// $color-sec-700: #1B262F;
-// $color-sec-800: #FBFCFE;
-// $color-sec-900: #FF0000;
-$shadow-btn: rem(10) rem(10) rem(25) rgba(55, 84, 109, 0.268);
-
-//* =======================  TYPOGRAPHY
-
-//FONT FAMILIY       
-$font-DM: 'DM Serif Display', serif;
-$font-public-sans: 'Public Sans', sans-serif;
-
-// FONT WEIGHT
-$weight-regular: 400;
-$weight-medium: 500;
-$weight-semi-bold: 600;
-$weight-bold: 700;
-$weight-extra-bold: 800;
-
-// ===============  BASE CSS RESET
-*, *::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-li {
-    list-style: none;
-}
-a {
-    text-decoration: none;
-}
-a:not([class]) {
-    text-decoration-skip-ink: auto;
-  }
-html:focus-within {
-  scroll-behavior: smooth;
-}
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-//* =============== MAKE ANIMATION OPTIONAL FOR USERS
-@media (prefers-reduced-motion: reduce) {
-    html:focus-within {
-     scroll-behavior: auto;
-    }
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-    //   scroll-behavior: auto !important;
-    }
-  }
-
-
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-// body
-body {
-    min-height: 100vh;
-    text-rendering: optimizeSpeed;
-    background-color: $color-bg;  
-    font-family: $font-public-sans;    
-    font-size: rem(15);
-    line-height: rem(28 );
-    color: $color-sec-lt-san-blue;
-}
-
-a{
-    font-size: rem(15);
-    font-family: $font-public-sans;
-    font-weight: $weight-bold;
-    text-decoration: none;
-    color: $color-sec-san-blue;
-    opacity: 0.7;
-
-    &:hover{
-        opacity: 1;
-    }
-}
-
-h1{
-    font-family: $font-DM;
-    font-size: rem(72);
-    color: $color-sec-san-blue;
-    line-height: rem(72);
-    letter-spacing: -0.55px;
-}
-
-button, .button{
-    padding: rem(15) rem(25);
-    border-radius: rem(24);
-    background-color: $color-pry-pink;
-    box-shadow: $shadow-btn;
-}
-
-//*  visibility
-.hide-for-mobile {
-  //hide elements in mobile view
-  @include breakpoint-down(small) {
-    display: none;
-  }
-}
-
-.hide-for-desktop {
-  //hide elements in desktopview
-  @include breakpoint-up(large) {
-    display: none;
-  }
-}
-
-.hide-for-tablet {
-  //hide elements in desktopview
-  @include breakpoint-up(medium) {
-    display: none;
-  }
-}
-
-.links{
-
-        a{
-
-            &:not(:first-of-type){
-                margin-left: rem(40);
-
-                @include breakpoint-down(small){
-                 margin-left: 0;
-                 
-                }
-            }
-
-        }
-
-        
-}
-
-// header styling
-.header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: rem(40) rem(165);
-
-    @include breakpoint-down(medium){
-        padding: rem(40);
-    }
-
-    @include breakpoint-down(small){
-        padding: rem(40) rem(24);
-    }
-
-    &__logo{
-        flex: 1;
-    }
-
-
-
-    nav{
-        flex: 3;
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
-
-        @include breakpoint-down(small){
-            flex: 1;
-            justify-content: flex-end;
-        }
-       
-    }
-
-    &__menu{
-        
-        span{
-            display:block;
-            width: rem(28);
-            height: rem(3);
-            background: $color-sec-mirage-blue;
-
-            &:not(:first-child){
-                margin-top: rem(4);
-            }
-        }
-    }
-
-
-    
-
-
-    &__cta{
-        letter-spacing: -0.12px;
-        color: $color-pry-white;
-
-        &:hover{
-            background-color: $color-sec-pink;
-        }
-    }
 
 }
 
 
-//*** Footer style 
-
-.footer{
-    background:url(../../img/shared/desktop/bg-pattern-circle.svg) ,$color-sec-mirage-blue;
-    background-repeat: no-repeat;
-    background-size: rem(780), 100%;
-    background-position: rem(980) rem(-150), center;
-    padding: rem(31) rem(165);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    @include breakpoint-down(medium){
-        padding: rem(31) rem(40);
-        background-position: rem(400) rem(-150), center;
-    }
-
-    @include breakpoint-down(small){
-        background-position: center rem(110), center;
-        padding: rem(48) rem(120);
-        flex-direction: column;
-        gap: rem(40);
-    }
-
-    &__logo{
-        flex: 1;
-    }
-
-    &__section{
-        flex:3;
-        display: flex;
-        justify-content:space-between;
-
-        @include breakpoint-down(small){
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: rem(40);
-        }
-    }
-
-    &__links{
-
-        @include breakpoint-down(small){
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: rem(31);
-
-        }
-        
-        a{
-            color: $color-pry-white;
-        }
-    }
-
-    &__social{
 
 
-        @include breakpoint-down(small){
-            display:flex;
-        }
-
-        i{
-            color: $color-pry-white;
-            font-size: rem(24);
-
-            &:hover{
-                color: $color-sec-pink;
-            }
-
-            &:not(:first-child){
-                margin-left: rem(24);
-            }
-        }
-    }
-}
 
 
-.background-container{
-    background: url(../../img/shared/desktop/bg-pattern-circle.svg);
-    background-repeat: no-repeat;
-    background-position: rem(780) rem(-200);
-}
 
-main{
-    padding: 0 rem(165)
-}
+
+

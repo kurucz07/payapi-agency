@@ -64,7 +64,7 @@ a {
   font-family: "Public Sans", sans-serif;
   font-weight: 700;
   text-decoration: none;
-  color: #37546d;
+  color: #36536b;
   opacity: 0.7;
 }
 
@@ -75,7 +75,7 @@ a:hover {
 h1 {
   font-family: "DM Serif Display", serif;
   font-size: 4.5rem;
-  color: #37546d;
+  color: #36536b;
   line-height: 4.5rem;
   letter-spacing: -0.55px;
 }
@@ -84,8 +84,8 @@ button, .button {
   padding: 0.9375rem 1.5625rem;
   border-radius: 1.5rem;
   background-color: #b9416f;
-  -webkit-box-shadow: 0.625rem 0.625rem 1.5625rem rgba(55, 84, 109, 0.268);
-          box-shadow: 0.625rem 0.625rem 1.5625rem rgba(55, 84, 109, 0.268);
+  -webkit-box-shadow: rem(10) rem(10) rem(25) rgba(55, 84, 109, 0.268);
+          box-shadow: rem(10) rem(10) rem(25) rgba(55, 84, 109, 0.268);
 }
 
 @media (max-width: 639px) {
@@ -114,6 +114,16 @@ button, .button {
   .links a:not(:first-of-type) {
     margin-left: 0;
   }
+}
+
+.background-container {
+  background: url(../../img/shared/desktop/bg-pattern-circle.svg);
+  background-repeat: no-repeat;
+  background-position: 48.75rem -12.5rem;
+}
+
+main {
+  padding: 0 10.3125rem;
 }
 
 .header {
@@ -304,13 +314,56 @@ button, .button {
   margin-left: 1.5rem;
 }
 
-.background-container {
-  background: url(../../img/shared/desktop/bg-pattern-circle.svg);
-  background-repeat: no-repeat;
-  background-position: 48.75rem -12.5rem;
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-main {
-  padding: 0 10.3125rem;
+.hero__left {
+  -webkit-box-flex: 1.5;
+      -ms-flex: 1.5;
+          flex: 1.5;
+}
+
+.hero__left .form-email {
+  background-color: #fbfcfe;
+  border-radius: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero__left input[type=email] {
+  color: #36536b;
+  opacity: 0.5;
+  font-weight: 700;
+  padding: 0.875rem 6.25rem 0.875rem 1.6875rem;
+  border: none;
+  border-radius: 1.5rem;
+}
+
+.hero__left input[type=email]:focus {
+  outline: none;
+}
+
+.hero__left .btn-form {
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.9375rem 1.625rem;
+  background-color: #da6c96;
+}
+
+.hero__right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  justify-items: center;
 }
 /*# sourceMappingURL=main.css.map */

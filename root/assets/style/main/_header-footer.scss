@@ -1,0 +1,150 @@
+//* ===============  AUTOMATICALLY CONVERT PX TO REM
+@function rem($size) {
+    $remSize: $size / 16;
+    @return #{$remSize}rem;
+
+}
+
+
+// header styling
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(40) rem(165);
+
+    @include breakpoint-down(medium){
+        padding: rem(40);
+    }
+
+    @include breakpoint-down(small){
+        padding: rem(40) rem(24);
+    }
+
+    &__logo{
+        flex: 1;
+    }
+
+
+
+    nav{
+        flex: 3;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include breakpoint-down(small){
+            flex: 1;
+            justify-content: flex-end;
+        }
+       
+    }
+
+    &__menu{
+        
+        span{
+            display:block;
+            width: rem(28);
+            height: rem(3);
+            background: $color-sec-mirage-blue;
+
+            &:not(:first-child){
+                margin-top: rem(4);
+            }
+        }
+    }
+
+
+    
+
+
+    &__cta{
+        letter-spacing: -0.12px;
+        color: $color-pry-white;
+
+        &:hover{
+            background-color: $color-sec-pink;
+        }
+    }
+
+}
+
+
+//*** Footer style 
+
+.footer{
+    background:url(../../img/shared/desktop/bg-pattern-circle.svg) ,$color-sec-mirage-blue;
+    background-repeat: no-repeat;
+    background-size: rem(780), 100%;
+    background-position: rem(980) rem(-150), center;
+    padding: rem(31) rem(165);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint-down(medium){
+        padding: rem(31) rem(40);
+        background-position: rem(400) rem(-150), center;
+    }
+
+    @include breakpoint-down(small){
+        background-position: center rem(110), center;
+        padding: rem(48) rem(120);
+        flex-direction: column;
+        gap: rem(40);
+    }
+
+    &__logo{
+        flex: 1;
+    }
+
+    &__section{
+        flex:3;
+        display: flex;
+        justify-content:space-between;
+
+        @include breakpoint-down(small){
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: rem(40);
+        }
+    }
+
+    &__links{
+
+        @include breakpoint-down(small){
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: rem(31);
+
+        }
+        
+        a{
+            color: $color-pry-white;
+        }
+    }
+
+    &__social{
+
+
+        @include breakpoint-down(small){
+            display:flex;
+        }
+
+        i{
+            color: $color-pry-white;
+            font-size: rem(24);
+
+            &:hover{
+                color: $color-sec-pink;
+            }
+
+            &:not(:first-child){
+                margin-left: rem(24);
+            }
+        }
+    }
+}

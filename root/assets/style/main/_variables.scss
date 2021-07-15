@@ -1,0 +1,33 @@
+//* ===============  COLORS 
+
+// primary
+$color-pry-pink: hsl(337, 48%, 49%);
+$color-pry-white: hsl(220, 60%, 99%);
+
+//secondary
+$color-sec-san-blue: #36536b;
+$color-sec-mirage-blue: hsl(207, 27%, 15%);
+$color-sec-pink: hsl(337, 60%, 64%);
+$color-sec-lt-san-blue: hsl(207, 16%, 50%);
+$color-bg: #EDF3F8;
+
+//state
+// $color-sec-link: #93A5B3;
+// $color-sec-600: #DA6D97;
+// $color-sec-700: #1B262F;
+// $color-sec-800: #FBFCFE;
+// $color-sec-900: #FF0000;
+$shadow-btn: rem(10) rem(10) rem(25) rgba(55, 84, 109, 0.268);
+
+//* =======================  TYPOGRAPHY
+
+//FONT FAMILIY       
+$font-DM: 'DM Serif Display', serif;
+$font-public-sans: 'Public Sans', sans-serif;
+
+// FONT WEIGHT
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semi-bold: 600;
+$weight-bold: 700;
+$weight-extra-bold: 800;

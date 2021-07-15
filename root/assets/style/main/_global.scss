@@ -1,0 +1,143 @@
+//* ===============  AUTOMATICALLY CONVERT PX TO REM
+@function rem($size) {
+    $remSize: $size / 16;
+    @return #{$remSize}rem;
+
+}
+
+
+// ===============  BASE CSS RESET
+*, *::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+  }
+html:focus-within {
+  scroll-behavior: smooth;
+}
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+//* =============== MAKE ANIMATION OPTIONAL FOR USERS
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+     scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    //   scroll-behavior: auto !important;
+    }
+  }
+
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+// body
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    background-color: $color-bg;  
+    font-family: $font-public-sans;    
+    font-size: rem(15);
+    line-height: rem(28 );
+    color: $color-sec-lt-san-blue;
+}
+
+a{
+    font-size: rem(15);
+    font-family: $font-public-sans;
+    font-weight: $weight-bold;
+    text-decoration: none;
+    color: $color-sec-san-blue;
+    opacity: 0.7;
+
+    &:hover{
+        opacity: 1;
+    }
+}
+
+h1{
+    font-family: $font-DM;
+    font-size: rem(72);
+    color: $color-sec-san-blue;
+    line-height: rem(72);
+    letter-spacing: -0.55px;
+}
+
+button, .button{
+    padding: rem(15) rem(25);
+    border-radius: rem(24);
+    background-color: $color-pry-pink;
+    box-shadow: $shadow-btn;
+}
+
+//*  visibility
+.hide-for-mobile {
+  //hide elements in mobile view
+  @include breakpoint-down(small) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  //hide elements in desktopview
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
+
+.hide-for-tablet {
+  //hide elements in desktopview
+  @include breakpoint-up(medium) {
+    display: none;
+  }
+}
+
+.links{
+
+        a{
+
+            &:not(:first-of-type){
+                margin-left: rem(40);
+
+                @include breakpoint-down(small){
+                 margin-left: 0;
+                 
+                }
+            }
+
+        }
+
+        
+}
+
+.background-container{
+    background: url(../../img/shared/desktop/bg-pattern-circle.svg);
+    background-repeat: no-repeat;
+    background-position: rem(780) rem(-200);
+}
+
+main{
+    padding: 0 rem(165)
+}
