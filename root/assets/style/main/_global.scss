@@ -227,11 +227,14 @@ button, .button{
                 border:none;
                 border-radius: rem(24);
                 padding: rem(15) rem(26);
-
-                background-color: $color-sec-pink ;
+                background-color: $color-pry-pink ;
                 font-size: rem(15);
                 font-weight: $weight-bold;
                 color: $color-pry-white;
+
+                &:hover{
+                  background-color: $color-sec-pink ;
+                }
 
                 @include breakpoint-down(small){
                     text-align: center;

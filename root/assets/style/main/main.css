@@ -222,10 +222,14 @@ button, .button {
   border: none;
   border-radius: 1.5rem;
   padding: 0.9375rem 1.625rem;
-  background-color: #da6c96;
+  background-color: #b9416f;
   font-size: 0.9375rem;
   font-weight: 700;
   color: #fbfcfe;
+}
+
+.form-email .btn-form:hover {
+  background-color: #da6c96;
 }
 
 @media (max-width: 639px) {
@@ -451,6 +455,7 @@ button, .button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 3.125rem;
 }
 
 @media (max-width: 1023px) {
