@@ -78,7 +78,7 @@ a{
     }
 }
 
-h1,h2{
+h1,h2,h4,h5{
   font-family: $font-DM;
 }
 
@@ -119,6 +119,31 @@ h3{
   letter-spacing: -0.14px;
   line-height: rem(25);
   color: $color-sec-san-blue;
+}
+
+h4{
+  color: $color-pry-pink;
+  font-size: rem(32);
+  letter-spacing: -0.25px;
+  line-height: rem(40);
+
+  @include breakpoint-down(medium){
+    font-size: rem(24);
+    letter-spacing: -0.18px;
+  }
+}
+
+h5{
+  font-size: rem(56);
+  letter-spacing: -0.43px;
+  line-height: rem(72);
+  color: $color-sec-san-blue;
+
+  @include breakpoint-down(medium){
+    font-size: rem(48);
+    letter-spacing: -0.37px;
+  }
+
 }
 
 button, .button{
@@ -168,6 +193,8 @@ button, .button{
         
 }
 
+// *** containers for backgrounds
+
 .background-container{
     background: url(../../img/shared/desktop/bg-pattern-circle.svg);
     background-repeat: no-repeat;
@@ -179,6 +206,19 @@ button, .button{
     }
     @include breakpoint-down(small){
       background-position: center rem(-930);
+    }
+}
+
+.background-container-others{
+    background: url(../../img/shared/desktop/bg-pattern-circle.svg);
+    background-repeat: no-repeat;
+    background-position: rem(780) rem(-450);
+
+    @include breakpoint-down(medium){
+      background-position: rem(400) rem(-500);
+    }
+    @include breakpoint-down(small){
+      background-position: rem(200) rem(-500);
     }
 }
 
@@ -219,35 +259,32 @@ button, .button{
                 @include breakpoint-down(small){
                     padding: rem(14) rem(10) ;
                     text-align: center;
-
                 }
             }
 
-            .btn-form{
-                border:none;
-                border-radius: rem(24);
-                padding: rem(15) rem(26);
-                background-color: $color-pry-pink ;
-                font-size: rem(15);
-                font-weight: $weight-bold;
-                color: $color-pry-white;
+    .btn-form{
+      border:none;
+      border-radius: rem(24);
+      padding: rem(15) rem(26);
+      background-color: $color-pry-pink ;
+      font-size: rem(15);
+      font-weight: $weight-bold;
+      color: $color-pry-white;
 
-                &:hover{
-                  background-color: $color-sec-pink ;
-                }
+      &:hover{
+        background-color: $color-sec-pink ;
+      }
 
-                @include breakpoint-down(small){
-                    text-align: center;
+      @include breakpoint-down(small){
+          text-align: center;
 
-                }
+      }
 
-            }
-
-
-        }
+    }
+}
 
 // *** button with border style
-.btn-outline{
+.btn-outline,.btn-outline-dark{
   border: 1px solid $color-pry-white;
   width: rem(140);
   display: grid;
@@ -262,4 +299,15 @@ button, .button{
       background-color: $color-pry-white;
       color: $color-sec-mirage-blue;
   }
+}
+
+.btn-outline-dark{
+  border: 1px solid $color-sec-mirage-blue;
+  color: $color-sec-mirage-blue;
+
+   &:hover{
+      background-color: $color-sec-mirage-blue;
+      color: $color-pry-white;
+  }
+
 }
