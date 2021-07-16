@@ -177,6 +177,25 @@ button, .button {
   }
 }
 
+.background-container-others {
+  background: url(../../img/shared/desktop/bg-pattern-circle.svg);
+  background-repeat: no-repeat;
+  background-position: 48.75rem -28.125rem;
+}
+
+@media (max-width: 1023px) {
+  .background-container-others {
+    background-size: 73.125rem auto;
+    background-position: center -56.25rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .background-container-others {
+    background-position: center -58.125rem;
+  }
+}
+
 .form-email {
   background-color: #fbfcfe;
   border-radius: 1.5rem;
@@ -780,5 +799,19 @@ button, .button {
   .cta h2 {
     text-align: center;
   }
+}
+
+.pricing-container h1 {
+  margin: 5.125rem 10.3125rem 4.5rem 10.3125rem;
+}
+
+.pricing-container .pricing {
+  padding: 0 10.3125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=main.css.map */
