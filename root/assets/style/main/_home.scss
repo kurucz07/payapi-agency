@@ -5,11 +5,16 @@
 
 }
 
+
+
+//*** hero section
+
 .hero{
     padding: 0 rem(165);
     display:flex;
     justify-content:space-between;
     align-items: center;
+    gap: rem(50);
 
     @include breakpoint-down(medium){
         flex-direction: column-reverse;
@@ -30,9 +35,6 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            // display: grid;
-            // place-content: center;
-            // place-items: center;
         }
 
         h1{
@@ -71,6 +73,9 @@
 
 }
 
+
+// *** Partners section 
+
 .partners{
     display:flex;
     background: url(../../img/shared/desktop/bg-pattern-circle.svg);
@@ -83,6 +88,7 @@
 
 
     @include breakpoint-down(medium){
+        margin-top: rem(100);
         flex-direction: column-reverse;
         padding: rem(88) rem(116);
         background-position: center rem(-580);
@@ -96,20 +102,6 @@
 
     &__logos{
         flex: 1;
-        // width: 100%;
-        // // display: flex;
-        // // flex-direction: column;
-        // display: grid;
-        // place-items: center;
-        // place-content: center;
-        // gap: rem(40);
-
-        // &-logo{
-        //     display: flex;
-        //     align-items: center;
-        //     justify-content: center;
-        //     gap: rem(31);
-        // }
 
         display: grid;
         grid-template-columns: repeat(3, minmax(100px, 1fr));
@@ -118,9 +110,6 @@
 
         @include breakpoint-down(small){
             grid-template-columns: repeat(2, minmax(100px, 1fr));
-
-
-
         }
     }
 
@@ -136,25 +125,6 @@
             color: $color-pry-white;
         }
 
-
-
-        .btn-outline{
-            border: 1px solid $color-pry-white;
-            width: rem(140);
-            display: grid;
-            place-items: center;
-            place-content: center;
-            height: rem(48);
-            border-radius: rem(24);
-            opacity: 1;
-            color: $color-pry-white;
-
-            &:hover{
-                background-color: $color-pry-white;
-                color: $color-sec-mirage-blue;
-            }
-        }
-
         @include breakpoint-down(medium){
             align-items: center;
 
@@ -165,3 +135,120 @@
 
     }
 }
+
+
+// *** features section
+
+.features{
+    padding: rem(150) 0;
+    display: flex;
+    flex-direction: column;
+    gap: rem(150);
+    background: url(../../img/shared/desktop/bg-pattern-circle.svg);
+    background-repeat: no-repeat;
+    background-position: rem(1000) bottom;
+
+    @include breakpoint-down(medium){
+        background: none;
+        padding:rem(100) 0;
+        gap: rem(100);
+    }
+
+    .feature{
+        display: flex;
+        align-items: center;
+
+        @include breakpoint-down(medium){
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    &__up{
+        padding: 0 rem(215) 0 rem(210);
+
+    }
+
+    &__down{
+        padding: 0 rem(169.5) 0 rem(165);
+    }
+
+    &__up, &__down{
+        @include breakpoint-down(medium){
+            padding: 0 rem(98) 0 rem(97);
+        }
+
+        @include breakpoint-down(small){
+            padding: 0 rem(24) 0 rem(23);
+
+        }
+    }
+
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: rem(24);
+    }
+
+}
+
+// ** extras section
+
+.extras{
+    padding: 0 rem(165);
+    display: flex;
+    gap: rem(30);
+
+    @include breakpoint-down(medium){
+        padding: 0 rem(40);
+    }
+    
+    @include breakpoint-down(small){
+        padding: 0 rem(24);
+        flex-direction: column;
+    }
+
+    &__section, &__section-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: rem(32);
+
+        @include breakpoint-down(medium){
+            gap: rem(10);
+        }
+    }
+}
+
+// *** cta section 
+
+.cta{
+    padding: rem(100) rem(165);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(100);
+
+    @include breakpoint-down(medium){
+        padding: rem(100) rem(162);
+        flex-direction: column;
+    }
+
+    @include breakpoint-down(small){
+        padding: rem(80) rem(24);
+    }
+
+    h2{
+        color: $color-sec-san-blue;
+
+        @include breakpoint-down(medium){
+            text-align: center;
+        }
+    }
+}
+
+
+
