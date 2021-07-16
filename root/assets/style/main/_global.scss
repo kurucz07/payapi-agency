@@ -193,6 +193,8 @@ button, .button{
         
 }
 
+// *** containers for backgrounds
+
 .background-container{
     background: url(../../img/shared/desktop/bg-pattern-circle.svg);
     background-repeat: no-repeat;
@@ -213,11 +215,10 @@ button, .button{
     background-position: rem(780) rem(-450);
 
     @include breakpoint-down(medium){
-      background-size: rem(1170) auto;
-      background-position: center rem(-900);
+      background-position: rem(400) rem(-500);
     }
     @include breakpoint-down(small){
-      background-position: center rem(-930);
+      background-position: rem(200) rem(-500);
     }
 }
 

@@ -2,6 +2,10 @@
 .pricing-container{
     h1{
         margin: rem(82) rem(165) rem(72) rem(165);
+
+        @include breakpoint-down(medium){
+            margin: rem(75) auto rem(69) auto;
+        }
     }
 
     .pricing{
@@ -10,7 +14,24 @@
         justify-content: space-between;
         gap: rem(10);
 
+        @include breakpoint-down(medium){
+            padding: 0 rem(40);
+
+        }
+
+        @include breakpoint-down(tablet-small){
+            flex-direction: column;
+        }
+
         &__plan{
+
+            @include breakpoint-down(medium){
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                text-align: center;
+            }
 
             h4{
                 margin-bottom: rem(80);
@@ -34,10 +55,30 @@
                 flex-direction: column;
                 gap: rem(8);
 
+                @include breakpoint-down(medium){
+                    text-align: left;
+                }
+
+                @include breakpoint-down(tablet-small){
+            
+                    // padding: rem(24) 0 rem(24) rem(150);
+
+                    // border-height: rem(500);
+                    // width: 100%;
+                    // align-items: center;
+                    // justify-content: center;
+                    
+                }
+
                 .checked{
                     display: flex;
                     align-items: center;
                     gap: rem(24);
+
+                    @include breakpoint-down(tablet-small){
+                        // align-self: flex-start;
+                    
+                    }
                 }
 
                 .unchecked{

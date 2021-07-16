@@ -213,14 +213,13 @@ button, .button {
 
 @media (max-width: 1023px) {
   .background-container-others {
-    background-size: 73.125rem auto;
-    background-position: center -56.25rem;
+    background-position: 25rem -31.25rem;
   }
 }
 
 @media (max-width: 639px) {
   .background-container-others {
-    background-position: center -58.125rem;
+    background-position: 12.5rem -31.25rem;
   }
 }
 
@@ -843,6 +842,12 @@ button, .button {
   margin: 5.125rem 10.3125rem 4.5rem 10.3125rem;
 }
 
+@media (max-width: 1023px) {
+  .pricing-container h1 {
+    margin: 4.6875rem auto 4.3125rem auto;
+  }
+}
+
 .pricing-container .pricing {
   padding: 0 10.3125rem;
   display: -webkit-box;
@@ -852,6 +857,37 @@ button, .button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 0.625rem;
+}
+
+@media (max-width: 1023px) {
+  .pricing-container .pricing {
+    padding: 0 2.5rem;
+  }
+}
+
+@media (max-width: 722px) {
+  .pricing-container .pricing {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 1023px) {
+  .pricing-container .pricing__plan {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
 }
 
 .pricing-container .pricing__plan h4 {
@@ -879,6 +915,12 @@ button, .button {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.5rem;
+}
+
+@media (max-width: 1023px) {
+  .pricing-container .pricing__plan .offers {
+    text-align: left;
+  }
 }
 
 .pricing-container .pricing__plan .offers .checked {
