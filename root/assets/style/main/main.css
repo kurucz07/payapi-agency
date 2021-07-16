@@ -73,7 +73,7 @@ a:hover {
   opacity: 1;
 }
 
-h1, h2 {
+h1, h2, h4, h5 {
   font-family: "DM Serif Display", serif;
 }
 
@@ -120,6 +120,34 @@ h3 {
   letter-spacing: -0.14px;
   line-height: 1.5625rem;
   color: #36536b;
+}
+
+h4 {
+  color: #b9416f;
+  font-size: 2rem;
+  letter-spacing: -0.25px;
+  line-height: 2.5rem;
+}
+
+@media (max-width: 1023px) {
+  h4 {
+    font-size: 1.5rem;
+    letter-spacing: -0.18px;
+  }
+}
+
+h5 {
+  font-size: 3.5rem;
+  letter-spacing: -0.43px;
+  line-height: 4.5rem;
+  color: #36536b;
+}
+
+@media (max-width: 1023px) {
+  h5 {
+    font-size: 3rem;
+    letter-spacing: -0.37px;
+  }
 }
 
 button, .button {
@@ -257,7 +285,7 @@ button, .button {
   }
 }
 
-.btn-outline {
+.btn-outline, .btn-outline-dark {
   border: 1px solid #fbfcfe;
   width: 8.75rem;
   display: -ms-grid;
@@ -270,9 +298,19 @@ button, .button {
   color: #fbfcfe;
 }
 
-.btn-outline:hover {
+.btn-outline:hover, .btn-outline-dark:hover {
   background-color: #fbfcfe;
   color: #1c2731;
+}
+
+.btn-outline-dark {
+  border: 1px solid #1c2731;
+  color: #1c2731;
+}
+
+.btn-outline-dark:hover {
+  background-color: #1c2731;
+  color: #fbfcfe;
 }
 
 .header {
@@ -813,5 +851,47 @@ button, .button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 0.625rem;
+}
+
+.pricing-container .pricing__plan h4 {
+  margin-bottom: 5rem;
+}
+
+.pricing-container .pricing__plan > p {
+  margin-bottom: 0.5rem;
+}
+
+.pricing-container .pricing__plan h5 {
+  margin-bottom: 1.5rem;
+}
+
+.pricing-container .pricing__plan .offers {
+  margin-bottom: 1.5rem;
+  border-top: 1px solid rgba(54, 83, 107, 0.255);
+  border-bottom: 1px solid rgba(54, 83, 107, 0.255);
+  padding: 1.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pricing-container .pricing__plan .offers .checked {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+}
+
+.pricing-container .pricing__plan .offers .unchecked {
+  margin-left: 2.3125rem;
 }
 /*# sourceMappingURL=main.css.map */
