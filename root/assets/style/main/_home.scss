@@ -231,3 +231,32 @@
     }
 }
 
+// *** cta section 
+
+.cta{
+    padding: rem(100) rem(165);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(100);
+
+    @include breakpoint-down(medium){
+        padding: rem(100) rem(162);
+        flex-direction: column;
+    }
+
+    @include breakpoint-down(small){
+        padding: rem(80) rem(24);
+    }
+
+    h2{
+        color: $color-sec-san-blue;
+
+        @include breakpoint-down(medium){
+            text-align: center;
+        }
+    }
+}
+
+
+
