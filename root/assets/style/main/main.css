@@ -839,12 +839,12 @@ button, .button {
 }
 
 .pricing-container h1 {
-  margin: 5.125rem 10.3125rem 4.5rem 10.3125rem;
+  margin: 5.125rem 10.3125rem 4.5rem;
 }
 
 @media (max-width: 1023px) {
   .pricing-container h1 {
-    margin: 4.6875rem auto 4.3125rem auto;
+    margin: 4.6875rem auto 4.3125rem;
   }
 }
 

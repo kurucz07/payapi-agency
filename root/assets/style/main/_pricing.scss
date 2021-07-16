@@ -1,10 +1,10 @@
 
 .pricing-container{
     h1{
-        margin: rem(82) rem(165) rem(72) rem(165);
+        margin: rem(82) rem(165) rem(72) ;
 
         @include breakpoint-down(medium){
-            margin: rem(75) auto rem(69) auto;
+            margin: rem(75) auto rem(69);
         }
     }
 
@@ -59,16 +59,7 @@
                     text-align: left;
                 }
 
-                @include breakpoint-down(tablet-small){
             
-                    // padding: rem(24) 0 rem(24) rem(150);
-
-                    // border-height: rem(500);
-                    // width: 100%;
-                    // align-items: center;
-                    // justify-content: center;
-                    
-                }
 
                 .checked{
                     display: flex;
