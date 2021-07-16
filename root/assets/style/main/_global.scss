@@ -114,6 +114,13 @@ h2{
     }
 }
 
+h3{
+  font-size: rem(18);
+  letter-spacing: -0.14px;
+  line-height: rem(25);
+  color: $color-sec-san-blue;
+}
+
 button, .button{
     padding: rem(15) rem(25);
     border-radius: rem(24);

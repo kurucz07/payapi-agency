@@ -115,6 +115,13 @@ h2 {
   }
 }
 
+h3 {
+  font-size: 1.125rem;
+  letter-spacing: -0.14px;
+  line-height: 1.5625rem;
+  color: #36536b;
+}
+
 button, .button {
   padding: 0.9375rem 1.5625rem;
   border-radius: 1.5rem;
@@ -693,6 +700,22 @@ button, .button {
   gap: 1.875rem;
 }
 
+@media (max-width: 1023px) {
+  .extras {
+    padding: 0 2.5rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .extras {
+    padding: 0 1.5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .extras__section, .extras__section-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -706,5 +729,11 @@ button, .button {
           align-items: center;
   text-align: center;
   gap: 2rem;
+}
+
+@media (max-width: 1023px) {
+  .extras__section, .extras__section-content {
+    gap: 0.625rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
