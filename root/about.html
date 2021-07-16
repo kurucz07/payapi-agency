@@ -4,59 +4,188 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+    
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
 
-    <title>Frontend Mentor | PayAPI Website Challenge</title>
+  <title>PayAPI | Start Building With Our Free APIs</title>
+  <meta name="description" content="Our API comes with just a few lines of code. You’ll be up and running in 
+    no time. We built our documentation page to integrate payments functionality 
+    with ease.">
+  <meta name="keyword" content="api, free api, api integration, api company">
+
+
+  <!-- OPEN GRAPH TAGS -->
+  <meta property="og:title" content="PayAPI | Start Building With Our Free APIs" />
+  <meta property="og:description" content="Our API comes with just a few lines of code. You’ll be up and running in 
+    no time. We built our documentation page to integrate payments functionality 
+    with ease." />
+  <meta property="og:url" content="https://payapi-agency.netlify.app/" />
+  <meta property="og:image" content="https://payapi-web.netlify.app/preview.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- THEME COLOR FOR CHROME MOBILE BROWSERS -->
+  <meta name="theme-color" content="#36536B">
+
+  <script defer src="./assets/js/main.js"></script>
+
+  <!-- STYLE SHEETS -->
+  <link rel="stylesheet" href="./assets/style/main/main.css">
+
+  <!-- FONT DNS FROM: fonts.google.com -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
   </head>
 
+
   <body>
-    Pricing
-    About
-    Contact
-    Schedule a Demo
 
-    We empower innovators by delivering access to the financial system
+    <div class="background-container-others">
+      <header class="header">
+          <div class="header__logo">
+            <a href="index.html"> <img src="./assets/img/shared/desktop/logo.svg" alt=" payapi logo"></a>
+          </div>
 
-    Our Vision
+          <nav>
+            <div class="header__menu hide-for-tablet">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="header__links links hide-for-mobile">
+              <a href="pricing.html">Pricing</a>
+              <a href="about.html">About</a>
+              <a href="contact.html">Contact</a>
+            </div>
+      
+            <a href="#" class="header__cta button hide-for-mobile">Schedule a Demo</a>
+          </nav>
+        </header>
 
-    Our main goal is to build beautiful consumer experiences along with developer-friendly 
-    infrastructure. The result is an intelligent tool that gives everyone the ability to create 
-    amazing products that solve big problems. We are deeply focused on democratizing financial 
-    services through technology.
+        <main class="about-container about" >
 
-    Our Business
+          <h1>
+            We empower innovators by delivering access to the financial system
+          </h1>
 
-    At the core of our platform is the technical infrastructure APIs that connect consumers. 
-    Our innovative product provides key insights for businesses and individuals, as well as 
-    robust reporting for traditional financial institutions and developers.
+          <div class="about__statements">
 
-    Team Members 
-    300+
+            <div class="statement">
+              <h2>Our Vision</h2>
+              <p>
+                Our main goal is to build beautiful consumer experiences along with developer-friendly
+                infrastructure. The result is an intelligent tool that gives everyone the ability to create
+                amazing products that solve big problems. We are deeply focused on democratizing financial
+                services through technology.
+              </p>
+            </div>
 
-    Offices in the US 
-    3
+            <div class="statement">
+              <h2>Our Business</h2>
+              <p>
+                At the core of our platform is the technical infrastructure APIs that connect consumers.
+                Our innovative product provides key insights for businesses and individuals, as well as
+                robust reporting for traditional financial institutions and developers.
+              </p>
+            </div>
 
-    Transactions analyzed 
-    10M+
+          </div>
 
-    The Culture
+          <div class="about__image">
+            <img src="./assets/img/about/desktop/image-team-members.jpg" alt="image team members">
+          </div>
 
-    We strongly believe there's always an opportunity to learn from each other outside of 
-    day-to-day work, whether it's company-wide offsites, internal hackathons, or co-worker meetups. 
-    We always value cross-team collaboration and diversity of thought, no matter the job title.
+          <div class="about__stats">
+            <div class="stat">
+              <p>Team Members</p>
+              <h5>300+</h5>
+            </div>
 
-    The People
+            <div class="stat">
+              <p>Offices in the US</p>
+              <h5>3</h5>
+            </div>
+
+            <div class="stat">
+              <p>Transactions analyzed</p>
+              <h5>10M+</h5>
+            </div>
+          </div>
+
+          <div class="about__statements">
+
+            <div class="statement">
+              <h2>The Culture</h2>
+              <p>
+                We strongly believe there's always an opportunity to learn from each other outside of day-to-day work, whether it's company-wide offsites, internal hackathons, or co-worker meetups. We always value cross-team collaboration and diversity of thought, no matter the job title.
+              </p>
+            </div>
+
+            <div class="statement">
+              <h2>The People</h2>
+              <p>
+                We're all passionate about building a more efficient and inclusive financial infrastructure together. At PayAPI, we have diverse backgrounds and skills.
+              </p>
+            </div>
+
+          </div>
+
+
+          <section class="cta">
+          <h2>Ready to start?</h2> 
+
+          <form action="" class="form-email" method="get">
+
+              <input type="email" name="email" id="cta-email" placeholder="Enter email address">
+
+              <input type="submit" value="Schedule a Demo" class="btn-form">
+
+          </form>
     
-    We're all passionate about building a more efficient and inclusive financial infrastructure 
-    together. At PayAPI, we have diverse backgrounds and skills.
+        </section>
 
-    Ready to start? 
-    Enter email address 
-    Schedule a Demo
 
-    Pricing
-    About
-    Contact
+
+        </main>
+
+    </div>
+
+
+
+    <footer class="footer">
+
+      <div class="footer__logo">
+        <a href="index.html"><img src="./assets/img/shared/desktop/footer-logo.svg" alt=" payapi logo"></a>
+      </div>
+
+      <div class="footer__section">
+
+        <div class="footer__links links">
+          <a href="pricing.html">Pricing</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer__social">
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-linkedin"></i>
+        </div>
+        
+      </div>
+
+    </footer>
   </body>
 
 </html>
