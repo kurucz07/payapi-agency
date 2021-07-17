@@ -102,6 +102,28 @@ h1{
     }
 }
 
+.about h1, .contact h1{
+        margin: rem(82) rem(400) rem(51) rem(260);
+        font-size:  rem(56);
+        line-height: rem(56);
+        letter-spacing: -0.43px;
+
+        @include breakpoint-down(medium){
+            margin: rem(75) rem(98) rem(54);
+
+            font-size: rem(48);
+            letter-spacing: -0.37px;
+            text-align: center;
+        }
+
+        @include breakpoint-down(small){
+            margin: rem(48) rem(24);
+            font-size: rem(32);
+            line-height: rem(36);
+            letter-spacing: -0.25px;
+        }
+}
+
 h2{
   font-size: rem(48);
   line-height: rem(56);
@@ -147,6 +169,21 @@ h5{
   }
 
 }
+
+// screen readers
+.sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+            clip-path: inset(50%) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+  }
 
 button, .button{
     padding: rem(15) rem(25);
@@ -292,6 +329,8 @@ button, .button{
   display: grid;
   place-items: center;
   place-content: center;
+  font-weight: $weight-bold;
+
   height: rem(48);
   border-radius: rem(24);
   opacity: 1;
