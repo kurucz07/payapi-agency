@@ -1,0 +1,130 @@
+
+.contact{
+
+    h1{
+        margin: rem(82) rem(542) rem(43) rem(165);
+
+        @include breakpoint-down(medium){
+            margin: rem(75) rem(98) rem(54);
+
+            font-size: rem(48);
+            letter-spacing: -0.37px;
+            text-align: center;
+        }
+
+        @include breakpoint-down(small){
+            margin: rem(48) rem(24);
+            font-size: rem(32);
+            line-height: rem(36);
+            letter-spacing: -0.25px;
+        }
+
+        
+    }
+
+    &__application{
+        padding: rem(43) rem(165);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: rem(124);
+
+        @include breakpoint-down(medium){
+            padding: rem(43) 0;
+            flex-direction:column;
+        }
+
+        @include breakpoint-down(small){
+            padding: rem(43) rem(24);
+        }
+
+
+
+
+        &-content{
+            flex:1.3;
+            display: flex;
+            flex-direction: column;
+            gap: rem(40);
+
+            @include breakpoint-down(medium){
+                align-items: center;
+                width:100%;
+                padding: 0 rem(114);
+            }
+
+            @include breakpoint-down(small){
+                padding: 0 rem(24);
+            }
+
+            h2{
+                opacity: 0.75;
+                padding-right: rem(95);
+                font-size: rem(24);
+                line-height: rem(32);
+                letter-spacing: -0.18px;
+
+                @include breakpoint-down(medium){
+                    text-align:center;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    &__form{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: rem(24);
+
+        input[type=email], input[type=text]{
+            padding: 0 0 rem(16) rem(20);
+            background: none;
+            border:none;
+            border-bottom: 1px solid rgba(16, 99, 167, 0.255);
+            color: $color-sec-san-blue;
+
+            &:focus{
+                outline: none;
+                border-bottom: 1px solid $color-sec-san-blue;
+                
+            }
+        }
+
+        textarea{
+            padding: 0  rem(16) rem(20);
+
+            border: none;
+            border-bottom: 1px solid rgba(16, 99, 167, 0.255);
+            background: none;
+
+             &:focus{
+                outline: none;
+                border-bottom: 1px solid $color-sec-san-blue;
+            }
+
+        }
+
+        input[type=submit]{
+            background: none;
+
+            &:hover{
+                background: $color-sec-mirage-blue;
+            }
+        }
+
+        input[type=checkbox]{
+            border: none;
+        }
+
+        .update-check{
+            display: flex;
+            align-items: center;
+            gap: rem(26);
+        }
+
+    }
+
+    
+}

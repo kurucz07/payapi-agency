@@ -4,36 +4,159 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+    
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
 
-    <title>Frontend Mentor | PayAPI Website Challenge</title>
+  <title>PayAPI | Start Building With Our Free APIs</title>
+  <meta name="description" content="Our API comes with just a few lines of code. You’ll be up and running in 
+    no time. We built our documentation page to integrate payments functionality 
+    with ease.">
+  <meta name="keyword" content="api, free api, api integration, api company">
+
+
+  <!-- OPEN GRAPH TAGS -->
+  <meta property="og:title" content="PayAPI | Start Building With Our Free APIs" />
+  <meta property="og:description" content="Our API comes with just a few lines of code. You’ll be up and running in 
+    no time. We built our documentation page to integrate payments functionality 
+    with ease." />
+  <meta property="og:url" content="https://payapi-agency.netlify.app/" />
+  <meta property="og:image" content="https://payapi-web.netlify.app/preview.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- THEME COLOR FOR CHROME MOBILE BROWSERS -->
+  <meta name="theme-color" content="#36536B">
+
+  <script defer src="./assets/js/main.js"></script>
+
+  <!-- STYLE SHEETS -->
+  <link rel="stylesheet" href="./assets/style/main/main.css">
+  <!-- <link rel="stylesheet" href="./assets/style/home/home.css"> -->
+
+  <!-- FONT DNS FROM: fonts.google.com -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
   </head>
 
   <body>
-    Pricing
-    About
-    Contact
-    Schedule a Demo
 
-    Submit a help request and we’ll get in touch shortly.
-    
-    Name
-    Email Address
-    Company Name
-    Title
-    Message
-    Stay up-to-date with company announcements and updates to our API
-    Submit
+    <div class="background-container-others">
+      <header class="header">
+          <div class="header__logo">
+              <a href="index.html"> <img src="./assets/img/shared/desktop/logo.svg" alt=" payapi logo"></a>
+            </div>
+          <nav>
+            <div class="header__menu hide-for-tablet">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="header__links links hide-for-mobile">
+              <a href="pricing.html">Pricing</a>
+              <a href="about.html">About</a>
+              <a href="contact.html">Contact</a>
+            </div>
+      
+            <a href="#" class="header__cta button hide-for-mobile">Schedule a Demo</a>
+          </nav>
+        </header>
+        <main class="contact" >
+          <h1>Submit a help request and we’ll get in touch shortly.</h1>
 
-    Join the thousands of innovators already building with us
+          <section class="contact__application">
 
-    Ready to start? 
-    Enter email address 
-    Schedule a Demo
+            <form action="" class="contact__form" method="get">
+              <input type="text" name="Name" id="Name" placeholder="Name" >
+              <input type="email" name="email" id="cntactEmail" placeholder="Email Address">
+              <input type="text" name="companyName" id=" CompanyName" placeholder="Company Name" >
+            
+              <input type="text" name="Title" id="Title" placeholder="Title" >
+              <textarea name="message" id="contactMessage" cols="30" rows="5"></textarea>
+              <div class="update-check">
+                <input type="checkbox" name="update" id="update"
+                >
 
-    Pricing
-    About
-    Contact
+                <p>
+                  Stay up-to-date with company announcements and updates to our API
+                </p>
+              </div>
+              <input type="submit" value="Submit" class="btn-outline-dark" >
+
+            </form>
+
+            <div class="contact__application-content">
+              <h2>Join the thousands of innovators already building with us</h2>
+
+              <div class="partners__logos">
+
+            
+              <img src="./assets/img/shared/desktop/tesla.svg" alt= "teslsa-logo">
+              <img src="./assets/img/shared/desktop/microsoft.svg" alt=" microsoft-logo">
+              <img src="./assets/img/shared/desktop/hewlett-packard.svg" alt="hewlett-packard-logo">
+           
+            
+              <img src="./assets/img/shared/desktop/oracle.svg" alt="oracle-logo">
+              <img src="./assets/img/shared/desktop/google.svg" alt=" google-logo">
+              <img src="./assets/img/shared/desktop/nvidia.svg" alt="nvidia-logo">
+            
+          </div>
+            </div>
+
+
+          </section>
+
+          <section class="cta">
+            <h2>Ready to start?</h2> 
+
+            <form action="" class="form-email" method="get">
+
+                <input type="email" name="email" id="cta-email" placeholder="Enter email address">
+
+                <input type="submit" value="Schedule a Demo" class="btn-form">
+
+            </form>
+      
+        </section>
+
+          
+        </main>
+    </div>
+
+    <footer class="footer">
+
+      <div class="footer__logo">
+        <a href="index.html"><img src="./assets/img/shared/desktop/footer-logo.svg" alt=" payapi logo"></a>
+      </div>
+
+      <div class="footer__section">
+
+        <div class="footer__links links">
+          <a href="pricing.html">Pricing</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer__social">
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-linkedin"></i>
+        </div>
+        
+      </div>
+
+    </footer>
+
   </body>
 
 </html>
