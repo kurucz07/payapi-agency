@@ -270,10 +270,14 @@ button, .button {
   display: -ms-flexbox;
   display: flex;
   width: 27.8125rem;
+  -webkit-box-shadow: 0.625rem 0.625rem 1.5625rem -0.625rem rgba(54, 83, 107, 0.25);
+          box-shadow: 0.625rem 0.625rem 1.5625rem -0.625rem rgba(54, 83, 107, 0.25);
 }
 
 @media (max-width: 639px) {
   .form-email {
+    -webkit-box-shadow: none;
+            box-shadow: none;
     background-color: unset;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -287,7 +291,8 @@ button, .button {
 .form-email input[type=email] {
   color: #36536b;
   font-weight: 700;
-  padding: 0.875rem 6.25rem 0.875rem 1.6875rem;
+  padding: 0.875rem 0.3125rem 0.875rem 1.6875rem;
+  width: 60%;
   border: none;
   border-radius: 1.5rem;
 }
@@ -299,6 +304,9 @@ button, .button {
 
 @media (max-width: 639px) {
   .form-email input[type=email] {
+    width: 100%;
+    -webkit-box-shadow: 0.625rem 0.625rem 1.5625rem -0.625rem rgba(54, 83, 107, 0.25);
+            box-shadow: 0.625rem 0.625rem 1.5625rem -0.625rem rgba(54, 83, 107, 0.25);
     padding: 0.875rem 0.625rem;
     text-align: center;
   }
