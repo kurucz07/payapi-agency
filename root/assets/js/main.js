@@ -9,5 +9,5 @@ const nav = document.querySelector('.nav')
 btnHamburger.addEventListener('click', function(){
     this.classList.toggle('header__menu--active');
     nav.classList.toggle('nav--active');
-
 })
+

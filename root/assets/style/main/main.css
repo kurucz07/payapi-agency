@@ -20,6 +20,28 @@
   }
 }
 
+@-webkit-keyframes slideOut {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
 *, *::before,
 *::after {
   -webkit-box-sizing: border-box;
@@ -466,10 +488,10 @@ button, .button {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    padding: 2.73125rem 1.5rem 0 1.5rem;
+    padding: 2.73125rem 1.5rem 0;
     gap: 2rem;
-    -webkit-animation: slideIn 500ms;
-            animation: slideIn 500ms;
+    -webkit-animation: slideIn 1s;
+            animation: slideIn 1s;
   }
   .header .nav--active .nav__menu {
     -ms-flex-item-align: end;
