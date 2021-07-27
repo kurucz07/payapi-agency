@@ -1,3 +1,47 @@
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slideOut {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
 *, *::before,
 *::after {
   -webkit-box-sizing: border-box;
@@ -270,10 +314,14 @@ button, .button {
   display: -ms-flexbox;
   display: flex;
   width: 27.8125rem;
+  -webkit-box-shadow: 0.625rem 0.625rem 1.5625rem -0.625rem rgba(54, 83, 107, 0.25);
+          box-shadow: 0.625rem 0.625rem 1.5625rem -0.625rem rgba(54, 83, 107, 0.25);
 }
 
 @media (max-width: 639px) {
   .form-email {
+    -webkit-box-shadow: none;
+            box-shadow: none;
     background-color: unset;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -287,7 +335,8 @@ button, .button {
 .form-email input[type=email] {
   color: #36536b;
   font-weight: 700;
-  padding: 0.875rem 6.25rem 0.875rem 1.6875rem;
+  padding: 0.875rem 0.3125rem 0.875rem 1.6875rem;
+  width: 60%;
   border: none;
   border-radius: 1.5rem;
 }
@@ -299,6 +348,9 @@ button, .button {
 
 @media (max-width: 639px) {
   .form-email input[type=email] {
+    width: 100%;
+    -webkit-box-shadow: 0.625rem 0.625rem 1.5625rem -0.625rem rgba(54, 83, 107, 0.25);
+            box-shadow: 0.625rem 0.625rem 1.5625rem -0.625rem rgba(54, 83, 107, 0.25);
     padding: 0.875rem 0.625rem;
     text-align: center;
   }
@@ -388,7 +440,7 @@ button, .button {
   opacity: 1;
 }
 
-.header nav {
+.header .nav {
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
@@ -404,13 +456,75 @@ button, .button {
 }
 
 @media (max-width: 639px) {
-  .header nav {
+  .header .nav {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+  }
+  .header .nav--active {
+    position: absolute;
+    background-color: #1c2731;
+    background-image: url(../../img/shared/desktop/bg-pattern-circle.svg);
+    background-repeat: no-repeat;
+    background-size: 800px auto;
+    background-position: center -33.75rem;
+    top: 0;
+    right: 0;
+    left: 4.6875rem;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 2.73125rem 1.5rem 0;
+    gap: 2rem;
+    -webkit-animation: slideIn 1s;
+            animation: slideIn 1s;
+  }
+  .header .nav--active .nav__menu {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .header .nav--active .nav__menu span {
+    background: white;
+  }
+  .header .nav--active .nav__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2rem;
+    border-top: 1px solid rgba(251, 252, 254, 0.15);
+    width: 100%;
+    padding: 2.6875rem;
+  }
+  .header .nav--active .nav__links a {
+    font-size: 1.25rem;
+    opacity: 0.7;
+    color: #fbfcfe;
+  }
+  .header .nav--active .nav__cta {
+    opacity: 1;
+    width: 100%;
+    display: block;
   }
 }
 
@@ -419,15 +533,34 @@ button, .button {
   width: 1.75rem;
   height: 0.1875rem;
   background: #1c2731;
+  -webkit-transition: all 600ms ease-in-out;
+  transition: all 600ms ease-in-out;
+  -webkit-transform-origin: 4px 2px;
+          transform-origin: 4px 2px;
 }
 
 .header__menu span:not(:first-child) {
   margin-top: 0.25rem;
 }
 
+.header__menu--active span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header__menu--active span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__menu--active span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 .header__cta {
   letter-spacing: -0.12px;
   color: #fbfcfe;
+  text-align: center;
 }
 
 .header__cta:hover {

@@ -47,6 +47,7 @@
   <!-- FONT AWESOME CDN -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
     integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
   </head>
 
   <body>
@@ -57,19 +58,22 @@
         <div class="header__logo">
             <a href="index.html"> <img src="./assets/img/shared/desktop/logo.svg" alt=" payapi logo"></a>
           </div>
-        <nav>
-          <div class="header__menu hide-for-tablet">
+
+        <nav class="nav" >
+
+          <div id="btnHamburger" class="header__menu nav__menu hide-for-tablet">
             <span></span>
             <span></span>
             <span></span>
           </div>
-          <div class="header__links links hide-for-mobile">
+
+          <div class="header__links nav__links links hide-for-mobile">
             <a href="pricing.html">Pricing</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
           </div>
       
-          <a href="#" class="header__cta button hide-for-mobile">Schedule a Demo</a>
+          <a href="#" class="header__cta nav__cta button hide-for-mobile">Schedule a Demo</a>
         </nav>
       </header>
 
@@ -115,8 +119,6 @@
               <img src="./assets/img/shared/desktop/tesla-w.svg" alt= "teslsa-logo">
               <img src="./assets/img/shared/desktop/microsoft-w.svg" alt=" microsoft-logo">
               <img src="./assets/img/shared/desktop/hewlett-packard-w.svg" alt="hewlett-packard-logo">
-           
-            
               <img src="./assets/img/shared/desktop/oracle-w.svg" alt="oracle-logo">
               <img src="./assets/img/shared/desktop/google-w.svg" alt=" google-logo">
               <img src="./assets/img/shared/desktop/nvidia-w.svg" alt="nvidia-logo">
@@ -255,6 +257,8 @@
       </div>
 
     </footer>
+
+    <script src="./assets/js/main.js"></script>
 
   </body>
 

@@ -271,9 +271,11 @@ button, .button{
 
             display:flex;
             width: rem(445);
+            box-shadow: rem(10) rem(10) rem(25) rem(-10) rgba(54,83, 107, 0.25); 
             
 
             @include breakpoint-down(small){
+              box-shadow: none;
                 background-color: unset;
                 flex-direction: column;
                 width: 100%;
@@ -285,7 +287,8 @@ button, .button{
             input[type=email]{
                 color: $color-sec-san-blue;
                 font-weight: $weight-bold;
-                padding: rem(14) rem(100) rem(14) rem(27);
+                padding: rem(14) rem(5) rem(14) rem(27);
+                width: 60%;
                 border: none;
                 border-radius: rem(24);
 
@@ -296,6 +299,9 @@ button, .button{
                 }
 
                 @include breakpoint-down(small){
+                  width: 100%;
+                    box-shadow: rem(10) rem(10) rem(25) rem(-10) rgba(54,83, 107, 0.25); 
+
                     padding: rem(14) rem(10) ;
                     text-align: center;
                 }

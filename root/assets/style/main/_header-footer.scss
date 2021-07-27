@@ -31,15 +31,76 @@
 
 
 
-    nav{
+    .nav{
         flex: 3;
         display:flex;
         justify-content: space-between;
         align-items: center;
 
+
         @include breakpoint-down(small){
             flex: 1;
             justify-content: flex-end;
+
+            &--active{
+                position:absolute; 
+                background-color: $color-sec-mirage-blue;
+                background-image: url(../../img/shared/desktop/bg-pattern-circle.svg);
+                background-repeat: no-repeat;
+                background-size: 800px auto;
+                background-position: center rem(-540);
+
+                top: 0;
+                right: 0;
+                left: rem(75);
+                
+                bottom: 0;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding: rem(43.7) rem(24) 0;
+                gap: rem(32);
+                animation: slideIn 1s;
+
+
+                
+
+                .nav__menu{
+                    align-self: flex-end;
+                    
+                    span{
+                        // position: relative;
+                        background: white;
+                        
+
+                    }
+                }
+
+                .nav__links{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: rem(32);
+
+                    border-top: 1px solid hsla(220, 60%, 99%, 0.15);
+                    width: 100%;
+                    padding: rem(43);
+
+                    a{
+                        font-size: rem(20);
+                        opacity: 0.7;
+                        color: $color-pry-white ;
+                    }
+                }
+
+                .nav__cta{
+                    opacity: 1;
+                    width: 100%;
+                    display: block;
+                }
+            }
         }
        
     }
@@ -51,11 +112,31 @@
             width: rem(28);
             height: rem(3);
             background: $color-sec-mirage-blue;
+            transition: all 600ms ease-in-out;
+            transform-origin: 4px 2px;
+
+            
 
             &:not(:first-child){
                 margin-top: rem(4);
             }
         }
+
+        &--active{
+            span:first-child{
+                transform: rotate(45deg);
+            }
+
+            span:nth-child(2){
+                opacity: 0;
+            }
+
+            span:last-child{
+                transform: rotate(-45deg);
+            }
+        }
+
+        
     }
 
 
@@ -65,6 +146,8 @@
     &__cta{
         letter-spacing: -0.12px;
         color: $color-pry-white;
+        text-align: center;
+
 
         &:hover{
             background-color: $color-sec-pink;
