@@ -10,8 +10,8 @@
 
     .pricing{
         padding: 0 rem(165);
-        display: flex;
-        justify-content: space-between;
+        @extend %flex-sb;
+
         gap: rem(10);
 
         @include breakpoint-down(medium){
@@ -26,10 +26,7 @@
         &__plan{
 
             @include breakpoint-down(medium){
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
+                @extend %flex;
                 text-align: center;
             }
 
@@ -50,26 +47,16 @@
                 border-top: 1px solid rgba(54, 83, 107, 0.255) ;
                 border-bottom: 1px solid rgba(54, 83, 107, 0.255);
                 padding:  rem(24) 0;
-
-                display: flex;
-                flex-direction: column;
+                @extend %flex-col;
                 gap: rem(8);
 
                 @include breakpoint-down(medium){
                     text-align: left;
                 }
 
-            
-
                 .checked{
-                    display: flex;
-                    align-items: center;
+                    @extend %flex-al;
                     gap: rem(24);
-
-                    @include breakpoint-down(tablet-small){
-                        // align-self: flex-start;
-                    
-                    }
                 }
 
                 .unchecked{

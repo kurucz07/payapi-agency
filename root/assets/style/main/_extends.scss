@@ -1,0 +1,41 @@
+%flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+%flex-1{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+
+}
+
+%flex-2{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+%flex-col{
+    display:flex;
+    flex-direction: column;
+}
+
+%flex-al{
+    display:flex;
+    align-items: center;
+}
+
+%flex-sb{
+    display: flex;
+    justify-content: space-between;
+}
+
+%bg-cir{
+    background: url(../../img/shared/desktop/bg-pattern-circle.svg);
+    background-repeat: no-repeat;
+}
