@@ -53,8 +53,8 @@ Users should be able to:
 ### What I learned
 
 - I learnt how to structure a multipage website. How the file structure should be, and how to keep it organised.
-- JSON-LDH for on-page SEO.
-- I was able to work on my CSS skills more.
+- LEarnt JSON-LDH for on-page SEO.
+- Gain more experience with CSS techniques and SASS.
 
 ## Author
 
