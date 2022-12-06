@@ -52,7 +52,7 @@ Users should be able to:
 
 ### What I learned
 
-- I learnt how to structure a multipage website. How the file structure should be, and how to keep it organised.
+- I learnt how to structure a multipage website. How the file structure should be, and how to keep it organised and detailed.
 - LEarnt JSON-LDH for on-page SEO.
 - Gain more experience with CSS techniques and SASS.
 
