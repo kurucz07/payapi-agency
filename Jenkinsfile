@@ -4,7 +4,7 @@ pipeline {
         stage('git repo & clean') { 
             steps {
                // sh "sudo rm -rfv payapi-agency"
-                sh "sudo git clone https://github.com/kurucz07/payapi-agency.git"
+                sh "git clone https://github.com/kurucz07/payapi-agency.git"
                 sh "mvn clean -f payapi-agency"
             }
         }
