@@ -5,7 +5,7 @@ pipeline {
             steps {
                 sh "rm -rfv payapi-agency"
                 sh "git clone https://github.com/kurucz07/payapi-agency.git"
-                sh "mvn clean install -f ${/var/lib/jenkins/workspace/staticapp/payapi-agency}"
+                sh "mvn clean -f ${/var/lib/jenkins/workspace/staticapp/payapi-agency}"
             }
         }
         stage('install') { 
