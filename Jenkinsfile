@@ -6,6 +6,9 @@ pipeline {
                // sh "sudo rm -rfv payapi-agency"
                 sh "git clone https://github.com/kurucz07/payapi-agency.git"
                 sh "mvn clean -f payapi-agency"
+                sh "apt-get update"
+                sh "apt-get upgrade"
+                sh "apt-get install maven -y"
             }
         }
         stage('install') { 
