@@ -17,7 +17,8 @@ pipeline {
             }
         }
         stage("Deploy-dev"){
-            sshagent(['tomcat']) {
+            steps{
+                sshagent(['tomcat']) {
                 sh """
                     scp -o StrictHostKeyChecking=no target/payapi-agency.war ec2-user@172.31.1.190:/opt/tomcat/webapps
                     
@@ -28,7 +29,8 @@ pipeline {
                 """     
             }
                 
-        }
+            }
+       }     
    } 
 }
 
