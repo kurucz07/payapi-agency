@@ -13,8 +13,23 @@ pipeline {
         stage("Maven Build"){
             steps{
                 sh "mvn clean package"
+                sh "mv target/*.war target/payapi-agency.war"
             }
         }
-   }
+        stage("Deploy-dev"){
+            sshagent(['tomcat']) {
+                sh """
+                    scp -o StrictHostKeyChecking=no target/payapi-agency.war ec2-user@172.31.1.190:/opt/tomcat/webapps
+                    
+                    shh ec2-user@172.31.1.190 /opt/tomcat/bin/shutdown.sh
+                    
+                     shh ec2-user@172.31.1.190 /opt/tomcat/bin/startup.sh
+                     
+                """     
+            }
+                
+        }
+   } 
 }
 
+        
