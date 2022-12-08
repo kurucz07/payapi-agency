@@ -20,7 +20,7 @@ pipeline {
             steps{
                 sshagent(['tomcatnew']) {
                 sh """
-                    scp -o StrictHostKeyChecking=no target/payapi-agency.jar ec2-user@44.211.85.242:/opt/tomcat/webapps
+                    ssh -o StrictHostKeyChecking=no target/payapi-agency.jar ec2-user@44.211.85.242:/opt/tomcat/webapps
                     
                     ssh ec2-user@44.211.85.242 /opt/tomcat/bin/shutdown.sh
                     
