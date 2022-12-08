@@ -1,10 +1,20 @@
 pipeline {
     agent any
+    
+    environment{
+        PATH = "/usr/share/maven/bin:$PATH"
+    }
     stages{
         stage("Git checkout"){
             steps{
                 git 'https://github.com/kurucz07/payapi-agency.git'
             }
         }
-    }
+        stage("Maven Build"){
+            steps{
+                sh "mvn clean package"
+            }
+        }
+   }
 }
+
