@@ -7,13 +7,13 @@ pipeline {
     stages{
         stage("Git checkout"){
             steps{
-                git 'https://github.com/kurucz07/payapi-agency.git'
+                sh "git clone https://github.com/kurucz07/payapi-agency.git"
             }
         }
         stage("Maven Build"){
             steps{
                 sh "mvn clean package"
-                sh "mv target/*.war target/payapi-agency.war"
+                sh "mv target/* target/payapi-agency"
             }
         }
         stage("Deploy-dev"){
