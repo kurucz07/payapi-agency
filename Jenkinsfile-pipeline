@@ -8,6 +8,7 @@ pipeline {
         stage("Git checkout"){
             steps{
                 git 'https://github.com/kurucz07/payapi-agency.git'
+                sh "git clone https://github.com/kurucz07/payapi-agency.git"
             }
         }
         stage("Maven Build"){
