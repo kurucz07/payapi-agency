@@ -8,15 +8,14 @@ pipeline {
         stage("Git checkout"){
             steps{
                 git 'https://github.com/kurucz07/payapi-agency.git'
-                sh "sudo mkdir -p /var/www/html/public"
-                sh "git clone https://github.com/kurucz07/payapi-agency.git /var/www/html"
+                sh "git clone https://github.com/kurucz07/payapi-agency.git"
             }
         }
         stage("Maven Build"){
             steps{
                 sh "mvn clean package"
                 sh "mv target/* target/payapi-agency"
-                sh "mv target/*.jar target/payapi-agency.jar"
+                sh "mv target/*.war target/payapi-agency.war"
             }
         }
         stage("Deploy-dev"){
