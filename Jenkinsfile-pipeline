@@ -13,7 +13,7 @@ pipeline {
         stage("Maven Build"){
             steps{
                 sh "mvn clean package"
-                sh "mv target/* target/payapi-agency"
+                sh "mv target/*.jar target/payapi-agency.jar"
             }
         }
         stage("Deploy-dev"){
