@@ -8,7 +8,7 @@ pipeline {
         stage("Git checkout"){
             steps{
                 git 'https://github.com/kurucz07/payapi-agency.git'
-                sh "mkdir -p /var/www/html"
+                sh "sudo mkdir -p /var/www/html"
                 sh "git clone https://github.com/kurucz07/payapi-agency.git /var/www/html"
             }
         }
