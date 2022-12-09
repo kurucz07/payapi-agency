@@ -7,6 +7,7 @@ pipeline {
     stages{
         stage("Git checkout"){
             steps{
+                sh "sudo rm -rf .git"
                 sh "git clone https://github.com/kurucz07/payapi-agency.git"
             }
         }
