@@ -7,7 +7,7 @@ pipeline {
     stages{
         stage("Git checkout"){
             steps{
-                git clone 'https://github.com/kurucz07/payapi-agency.git'
+                git 'https://github.com/kurucz07/payapi-agency.git'
             }
         }
         stage("Maven Build"){
